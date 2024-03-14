@@ -1,0 +1,117 @@
+:root {
+  --dark-cyan-color: hsl(185, 75%, 39%);
+  --dark-desaturatedblue-color: hsl(229, 23%, 23%);
+  --dark-grayish-blue-color: hsl(227, 10%, 46%);
+  --dark-gray-color: hsl(0, 0%, 59%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--dark-cyan-color);
+  overflow: hidden;
+}
+main {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top-image,
+.bottom-image {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+.top-image {
+  transform: translate(-50%, -50%);
+}
+.bottom-image {
+  transform: translate(50%, 50%);
+}
+.profile-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.profile-card .images img:first-child {
+  max-width: 100%;
+}
+.profile-card .images img:last-child {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -48px;
+  border-radius: 50%;
+}
+.profile-card .text {
+  text-align: center;
+  margin-top: 20px;
+  border-bottom: 1px solid hsl(0deg 0% 59% / 30%);
+  padding-bottom: 20px;
+}
+.profile-card .text h1 {
+  font-size: 1.2rem;
+  color: var(--dark-desaturatedblue-color);
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.profile-card .text h1 span {
+  display: inline-block;
+  margin-left: 5px;
+  color: var(--dark-grayish-blue-color);
+  font-weight: 500;
+}
+.profile-card .text > span {
+  color: var(--dark-grayish-blue-color);
+  margin-top: 5px;
+  display: block;
+}
+.profile-card .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.profile-card .stats li {
+  text-align: center;
+}
+.profile-card .stats li span {
+  display: block;
+}
+.profile-card .stats li span:first-child {
+  color: var(--dark-desaturatedblue-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.profile-card .stats li span:last-child {
+  color: var(--dark-gray-color);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+@media (max-width: 767px) {
+  .top-image {
+    transform: translate(-45%, -50%);
+  }
+  .bottom-image {
+    transform: translate(45%, 50%);
+  }
+}
